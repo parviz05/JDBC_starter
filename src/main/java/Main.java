@@ -20,7 +20,7 @@ public class Main {
         * xe    -- database service name
         * */
             //
-        String connection_str = "jdbc:oracle:thin:@18.206.235.47:1521:xe"; // replace ip with your ip
+        String connection_str = "jdbc:oracle:thin:@18.208.250.251:1521:xe"; // replace ip with your ip
         String db_user     = "hr";
         String db_password = "hr";
         // creating Connection object
@@ -39,12 +39,25 @@ public class Main {
         // initially the cursor is at right before first row, next() method will move it to first row
 //        rs.next();
 //        // printing out the Region_Name column value at first row
-//        System.out.println(rs.getObject("Region_Name"));
+  //      System.out.println(rs.getObject("Region_Name"));
 //        System.out.println(rs.getObject("Region_id"));
 //
 //        rs.next();
 //        System.out.println(rs.getObject("Region_Name"));
 //        System.out.println(rs.getObject("Region_id"));
+
+
+        //My Practices
+
+//        ResultSet rs2=stmt.executeQuery("SELECT*FROM countries");
+//
+//        while(rs2.next()){
+//            System.out.println(rs2.getObject("Country_name")+"-"+rs2.getObject("country_id"));
+//
+//        }
+
+
+
 
         while(rs.next()){
             System.out.println(rs.getObject("Region_ID")

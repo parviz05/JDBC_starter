@@ -47,6 +47,24 @@ public class MetaData {
 
         System.out.println("------------------\n");
         // list all the column name from the query result you got
+
+        //==>my_practices
+        String count="";
+        int count2=0;
+        for (int i =1; i<=rsmd.getColumnCount();i++){
+            // System.out.println(rsmd.getColumnName(i)+""+rsmd.getColumnCount());
+            count+=" | "+rsmd.getColumnName(i);
+            count2=rsmd.getColumnCount();
+
+        }
+
+
+        System.out.println(count);
+        System.out.println(count2);
+
+        System.out.println("----------------------\n");
+
+   //===========
         for (int i = 1; i <= rsmd.getColumnCount(); i++) {
 
             System.out.print(rsmd.getColumnName(i)+" | ");

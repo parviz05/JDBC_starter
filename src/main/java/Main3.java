@@ -66,4 +66,6 @@ public class Main3 {
 
     }
 
+    public static class My_JDBC_Pre {
+    }
 }

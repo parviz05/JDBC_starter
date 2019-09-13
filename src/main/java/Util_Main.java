@@ -18,9 +18,14 @@ public class Util_Main {
         // TO THE UTILITY
         // NAME IS  BLA BLA , SALARY IS 6 DIGIT
 
-        for ( Map<String,Object> rowMap   :  rsLst  ) {
-            System.out.println("Name: "+ rowMap.get("FIRST_NAME")+" | "
-                              +"Salary: "+rowMap.get("SALARY"));
+//        for ( Map<String,Object> rowMap   :  rsLst  ) {
+//            System.out.println("Name: "+ rowMap.get("FIRST_NAME")+" | "
+//                              +"Salary: "+rowMap.get("SALARY"));
+//        }
+        for (Map<String,Object>Mp:rsLst) {
+            System.out.println("Names is:-> "+Mp.get("FIRST_NAME")+ "Salary is:-> "+Mp.get("SALARY"));
+
+
         }
 
 
