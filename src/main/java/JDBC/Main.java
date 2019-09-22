@@ -1,3 +1,5 @@
+package JDBC;
+
 import java.sql.*;
 
 public class Main {
@@ -19,20 +21,26 @@ public class Main {
         * port  -- this is the port database use : 1521
         * xe    -- database service name
         * */
+<<<<<<< HEAD:src/main/java/Main.java
             //
         String connection_str = "jdbc:oracle:thin:@18.208.250.251:1521:xe"; // replace ip with your ip
         String db_user     = "hr";
+=======
+        //
+        String connection_str = "jdbc:oracle:thin:@18.206.235.47:1521:xe"; // replace ip with your ip
+        String db_user = "hr";
+>>>>>>> d56997fa5102e882ca2f578e91230f631e24bcc4:src/main/java/JDBC/Main.java
         String db_password = "hr";
         // creating Connection object
         // just like creating Webdriver object
         // According to what kind of driver and connection string provided
         //  it will create corresponding Connection object
-        Connection conn = DriverManager.getConnection(connection_str,db_user,db_password);
+        Connection conn = DriverManager.getConnection(connection_str, db_user, db_password);
 
         // once we have connection object , now we can create statement object. and it has ability to execute query
         //Statement stmt = conn.createStatement();
         // optionally you may do as below , if you don't want to just move top tp bottom direction
-        Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+        Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 
         // use Statement Object to run query and store the result in ResultSet object
         ResultSet rs = stmt.executeQuery("SELECT * FROM REGIONS");
@@ -46,6 +54,7 @@ public class Main {
 //        System.out.println(rs.getObject("Region_Name"));
 //        System.out.println(rs.getObject("Region_id"));
 
+<<<<<<< HEAD:src/main/java/Main.java
 
         //My Practices
 
@@ -60,8 +69,11 @@ public class Main {
 
 
         while(rs.next()){
+=======
+        while (rs.next()) {
+>>>>>>> d56997fa5102e882ca2f578e91230f631e24bcc4:src/main/java/JDBC/Main.java
             System.out.println(rs.getObject("Region_ID")
-                    + " "+ rs.getObject("Region_Name") );
+                    + " " + rs.getObject("Region_Name"));
         }
 
         /// Connection , Statement , ResultSet are considered as resources
